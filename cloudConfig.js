@@ -8,7 +8,7 @@ cloudinary.config({
 });
 
 
-const storage = new cloudinaryStorage({
+const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
       folder: 'tourco_DEV',
