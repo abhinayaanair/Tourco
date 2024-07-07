@@ -25,6 +25,10 @@ router
 router.get("/new", isLoggedIn, listingController.renderNewForm); //new route ko upr rkhege because agr /listings/:id iss se neeche rkhege to it will treat new as id and will start searching for it
 
 router
+.route("/search")
+.post(listingController.searchListing)
+
+router
   .route("/:id")
   .get(wrapAsync(listingController.showListing))
   .put(
