@@ -76,6 +76,8 @@ module.exports.destroyListing = async (req, res) => {
 
 module.exports.searchListing = async (req, res) => {
   let { destination } = req.body;
+
+  if(destination){
   let dest = destination.toLowerCase();
   let foundListings = await Listing.find({
     $or: [
@@ -86,4 +88,9 @@ module.exports.searchListing = async (req, res) => {
   console.log(foundListings);
   req.flash("success", "Listing found!");
   res.render("listings/search.ejs", { foundListings });
+}
+else{
+  req.flash("error", "Destination Not Listed");
+  res.redirect("/listings");
+}
 };
