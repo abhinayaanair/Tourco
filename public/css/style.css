@@ -118,3 +118,33 @@ color:#222;
     padding-left: 0;
     padding-right: 0;
 }
+
+#filters-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+  
+}
+
+#filters {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 1rem 0;
+}
+
+.filter {
+    flex: 0 0 auto;
+    text-align: center;
+    margin-right: 3rem;
+    opacity: 0.8;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
