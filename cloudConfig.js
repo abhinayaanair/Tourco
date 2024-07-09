@@ -13,7 +13,7 @@ const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
         folder: 'tourco_DEV',
-        allowed_formats: ['png', 'jpg', 'jpeg'], // Note the change here
+        allowed_formats: ['png', 'jpg', 'jpeg','avif'], // Note the change here
     },
 });
 
