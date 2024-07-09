@@ -14,7 +14,7 @@ module.exports.signup=async (req, res, next) => {
         console.log("User registered:", registeredUser); // Add this log to see if the user is registered successfully
         req.login(registeredUser, err => { // Log in the registered user
             if (err) return next(err);
-            req.flash('success', 'Welcome to Wanderlust!');
+            req.flash('success', 'Welcome to Tourco!');
             const redirectUrl = res.locals.redirectUrl || '/listings';
             delete res.locals.redirectUrl;
             res.redirect(redirectUrl);
